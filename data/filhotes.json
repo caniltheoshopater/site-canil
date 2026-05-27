@@ -1,27 +1,19 @@
 {
   "filhotes": [
     {
-      "nome": "Conan",
-      "sexo": "Macho",
-      "status": "Disponível",
-      "descricao": "Filhote saudável, temperamento equilibrado, pronto para conhecer sua nova família.",
-      "foto": "",
-      "ativo": true
-    },
-    {
       "nome": "Don Juan",
       "sexo": "Macho",
       "status": "Disponível",
       "descricao": "Carismático e brincalhão, com pelagem exuberante e ótima socialização desde os primeiros dias.",
-      "foto": "",
+      "foto": "images/uploads/dengoso-3-5-meses-6-.jpg",
       "ativo": true
     },
     {
-      "nome": "Partcolor",
-      "sexo": "",
-      "status": "Raridade",
-      "descricao": "Pelagem partcolor — combinação rara e marcante. Um filhote único para uma família especial.",
-      "foto": "",
+      "nome": "Panda",
+      "sexo": "Macho",
+      "status": "Disponível",
+      "descricao": "Pelagem partcolor — combinação perfeita e marcante. Um filhote único para uma família especial.",
+      "foto": "images/uploads/panda-a-1-.jpg",
       "ativo": true
     }
   ]
