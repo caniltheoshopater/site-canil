@@ -1,0 +1,68 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: 'pt'
+
+site_url: https://www.caniltheoshopater.com.br
+display_url: https://www.caniltheoshopater.com.br
+logo_url: https://www.caniltheoshopater.com.br/images/logo.png
+
+collections:
+  - name: "filhotes"
+    label: "Filhotes Disponíveis"
+    label_singular: "Filhote"
+    description: "Gerencie os filhotes disponíveis para reserva. Eles aparecem na seção 'Nossos filhotes' do site."
+    files:
+      - name: "lista"
+        label: "Lista de Filhotes"
+        file: "data/filhotes.json"
+        format: "json"
+        fields:
+          - label: "Filhotes"
+            name: "filhotes"
+            widget: "list"
+            label_singular: "Filhote"
+            summary: "{{fields.nome}} — {{fields.status}}"
+            fields:
+              - {label: "Nome", name: "nome", widget: "string", hint: "Ex: Conan, Don Juan, etc."}
+              - {label: "Sexo", name: "sexo", widget: "select", options: ["Macho", "Fêmea", ""], required: false, hint: "Pode deixar em branco se não quiser mostrar"}
+              - {label: "Status", name: "status", widget: "select", options: ["Disponível", "Reservado", "Raridade", "Em breve"], default: "Disponível"}
+              - {label: "Descrição", name: "descricao", widget: "text", hint: "Texto curto que aparece no card (2-3 linhas)"}
+              - {label: "Foto", name: "foto", widget: "image", required: false, hint: "Foto quadrada ou 4:5 (vertical) funciona melhor. Pode arrastar do celular."}
+              - {label: "Ativo no site?", name: "ativo", widget: "boolean", default: true, hint: "Desmarque para esconder do site sem deletar"}
+
+  - name: "plantel"
+    label: "Plantel (Pais e Mães)"
+    label_singular: "Animal do plantel"
+    description: "Matrizes (fêmeas) e padreadores (machos) do canil."
+    files:
+      - name: "lista"
+        label: "Lista do Plantel"
+        file: "data/plantel.json"
+        format: "json"
+        fields:
+          - label: "Animais"
+            name: "animais"
+            widget: "list"
+            label_singular: "Animal"
+            summary: "{{fields.nome}} — {{fields.sexo}}"
+            fields:
+              - {label: "Nome", name: "nome", widget: "string"}
+              - {label: "Sexo", name: "sexo", widget: "select", options: ["Fêmea", "Macho"]}
+              - {label: "Foto", name: "foto", widget: "image", required: false, hint: "Foto quadrada fica melhor"}
+
+  - name: "config"
+    label: "Configurações do Site"
+    description: "Imagens principais do site."
+    files:
+      - name: "geral"
+        label: "Imagens principais"
+        file: "data/config.json"
+        format: "json"
+        fields:
+          - {label: "Foto destaque (Hero)", name: "foto_hero", widget: "image", required: false, hint: "A foto grande que aparece no topo do site. Vertical (3:4) funciona melhor."}
+          - {label: "Foto da seção 'O Canil'", name: "foto_sobre", widget: "image", required: false, hint: "Foto que aparece ao lado do texto sobre o canil."}

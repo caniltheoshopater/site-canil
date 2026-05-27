@@ -1,0 +1,41 @@
+[build]
+  publish = "."
+
+# Redirect: www é o domínio canônico
+[[redirects]]
+  from = "https://caniltheoshopater.com.br/*"
+  to = "https://www.caniltheoshopater.com.br/:splat"
+  status = 301
+  force = true
+
+# Headers de segurança e performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache de imagens — 1 ano
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache de CSS e JS — 1 semana
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Dados JSON sem cache — atualização imediata do CMS
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

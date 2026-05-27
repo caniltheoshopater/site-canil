@@ -1,0 +1,14 @@
+{
+  "animais": [
+    {"nome": "Akira", "sexo": "Fêmea", "foto": ""},
+    {"nome": "Emmy", "sexo": "Fêmea", "foto": ""},
+    {"nome": "Zoe", "sexo": "Fêmea", "foto": ""},
+    {"nome": "Bella", "sexo": "Fêmea", "foto": ""},
+    {"nome": "Zara", "sexo": "Fêmea", "foto": ""},
+    {"nome": "Milly", "sexo": "Fêmea", "foto": ""},
+    {"nome": "Angel", "sexo": "Fêmea", "foto": ""},
+    {"nome": "Branca de Neve", "sexo": "Fêmea", "foto": ""},
+    {"nome": "Luiggi", "sexo": "Macho", "foto": ""},
+    {"nome": "Brownie", "sexo": "Macho", "foto": ""}
+  ]
+}
