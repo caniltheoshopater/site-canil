@@ -1,13 +1,6 @@
 [build]
   publish = "."
 
-# Redirect: www é o domínio canônico
-[[redirects]]
-  from = "https://caniltheoshopater.com.br/*"
-  to = "https://www.caniltheoshopater.com.br/:splat"
-  status = 301
-  force = true
-
 # Headers de segurança e performance
 [[headers]]
   for = "/*"
