@@ -15,6 +15,22 @@
       "descricao": "Pelagem partcolor — combinação perfeita e marcante. Um filhote único para uma família especial.",
       "foto": "images/uploads/panda-a-1-.jpg",
       "ativo": true
+    },
+    {
+      "status": "Disponível",
+      "ativo": true,
+      "nome": "Princesa",
+      "sexo": "Fêmea",
+      "descricao": "Linda princesinha, minúscula, alegre e divertida. Amor incondicional garantido. ",
+      "foto": "images/uploads/pequena-a-3-.jpg"
+    },
+    {
+      "status": "Disponível",
+      "ativo": true,
+      "nome": "Ferrari",
+      "sexo": "Macho",
+      "descricao": "Rápido e lindo como o nome indica. Pelagem marcante e abundante. Filho de pai merle e mãe branca.",
+      "foto": "images/uploads/ferrari-site.jpeg"
     }
   ]
 }
